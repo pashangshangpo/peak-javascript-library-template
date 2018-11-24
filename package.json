@@ -35,6 +35,5 @@
     "pretty-quick": "^1.8.0",
     "lint-staged": "^8.1.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

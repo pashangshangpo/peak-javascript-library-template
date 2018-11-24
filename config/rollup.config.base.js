@@ -11,28 +11,28 @@ import Commonjs from 'rollup-plugin-commonjs'
 import Pkg from '../package.json'
 
 export default {
-	pkg: Pkg,
-	input: 'src/index.js',
-	ecBase: {
-		output: [
-			{
+  pkg: Pkg,
+  input: 'src/index.js',
+  ecBase: {
+    output: [
+      {
         file: Pkg.main,
-        format: 'cjs' 
+        format: 'cjs',
       },
-			{
+      {
         file: Pkg.module,
-        format: 'es'
-      }
-		]
-	},
-	umdPluginsBase: [
-		Resolve(),
-		Commonjs({
-			include: 'node_modules/**'
-		}),
-		Babel({
-			runtimeHelpers: true,
-			exclude: 'node_modules/**'
-		})
-	]
+        format: 'es',
+      },
+    ],
+  },
+  umdPluginsBase: [
+    Resolve(),
+    Commonjs({
+      include: 'node_modules/**',
+    }),
+    Babel({
+      runtimeHelpers: true,
+      exclude: 'node_modules/**',
+    }),
+  ],
 }

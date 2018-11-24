@@ -7,17 +7,17 @@
 import BaseConfig from './rollup.config.base'
 
 export default [
-	{
-		input: BaseConfig.input,
-		output: {
+  {
+    input: BaseConfig.input,
+    output: {
       name: BaseConfig.pkg.name,
-			file: BaseConfig.pkg.browser,
-			format: 'umd'
-		},
-		plugins: BaseConfig.umdPluginsBase
-	},
-	{
-		input: BaseConfig.input,
-		...BaseConfig.ecBase
-	}
+      file: BaseConfig.pkg.browser,
+      format: 'umd',
+    },
+    plugins: BaseConfig.umdPluginsBase,
+  },
+  {
+    input: BaseConfig.input,
+    ...BaseConfig.ecBase,
+  },
 ]

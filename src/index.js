@@ -7,5 +7,5 @@
 export default {
   sayHello: msg => {
     console.log(`hello ${msg}`)
-  }
+  },
 }
