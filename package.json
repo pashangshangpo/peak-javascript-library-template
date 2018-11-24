@@ -1,0 +1,40 @@
+{
+  "name": "peak-javascript-library-template",
+  "version": "1.0.0",
+  "main": "dist/util.cjs.js",
+  "module": "dist/util.esm.js",
+  "browser": "dist/util.umd.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist",
+    "start": "npm run clean && rollup -w -c config/rollup.config.dev.js",
+    "build": "npm run clean && rollup -c config/rollup.config.prod.js",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": "pretty-quick"
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.67.3",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-filesize": "^5.0.1",
+    "rollup-plugin-uglify": "^6.0.0",
+    "uglify-es": "^3.3.9",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.15.2",
+    "pretty-quick": "^1.8.0",
+    "lint-staged": "^8.1.0"
+  },
+  "dependencies": {
+  }
+}

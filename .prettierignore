@@ -1,0 +1,5 @@
+*.min.*
+
+/dist
+/demo
+/node_modules
