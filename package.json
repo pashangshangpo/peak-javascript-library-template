@@ -1,5 +1,5 @@
 {
-  "name": "peak-javascript-library-template",
+  "name": "util",
   "version": "1.0.0",
   "main": "dist/util.cjs.js",
   "module": "dist/util.esm.js",

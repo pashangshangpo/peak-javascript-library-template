@@ -7,7 +7,7 @@
 var index = {
   sayHello: msg => {
     console.log(`hello ${msg}`);
-  }
+  },
 };
 
 export default index;

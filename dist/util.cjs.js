@@ -9,7 +9,7 @@
 var index = {
   sayHello: msg => {
     console.log(`hello ${msg}`);
-  }
+  },
 };
 
 module.exports = index;
