@@ -10,6 +10,9 @@ var index = {
   sayHello: msg => {
     console.log(`hello ${msg}`);
   },
+  count: (a, b) => {
+    return a + b
+  }
 };
 
 module.exports = index;

@@ -12,6 +12,9 @@
   var index = {
     sayHello: function sayHello(msg) {
       console.log("hello ".concat(msg));
+    },
+    count: function count(a, b) {
+      return a + b;
     }
   };
 
