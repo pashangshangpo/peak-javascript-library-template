@@ -28,6 +28,7 @@
     "rollup-plugin-json": "^3.1.0",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-filesize": "^5.0.1",
+    "rollup-plugin-replace": "^2.1.0",
     "rollup-plugin-uglify": "^6.0.0",
     "uglify-es": "^3.3.9",
     "pre-commit": "^1.2.2",

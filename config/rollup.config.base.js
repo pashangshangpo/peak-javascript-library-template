@@ -7,14 +7,18 @@
 import Babel from 'rollup-plugin-babel'
 import Resolve from 'rollup-plugin-node-resolve'
 import Commonjs from 'rollup-plugin-commonjs'
+import Replace from 'rollup-plugin-replace'
 
 import Pkg from '../package.json'
 
 export const Convert = str => {
   let arr = str.split('-')
-  let upperCase = arr.slice(1).map(i => {
-    return `${i[0].toUpperCase()}${i.slice(1)}`
-  }).join('')
+  let upperCase = arr
+    .slice(1)
+    .map(i => {
+      return `${i[0].toUpperCase()}${i.slice(1)}`
+    })
+    .join('')
 
   return `${arr[0]}${upperCase}`
 }
@@ -33,8 +37,16 @@ export default {
         format: 'es',
       },
     ],
+    plugins: [
+      Replace({
+        'process.env.NODE_ENV': JSON.stringify('production'),
+      }),
+    ],
   },
   umdPluginsBase: [
+    Replace({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+    }),
     Resolve(),
     Commonjs({
       include: 'node_modules/**',
