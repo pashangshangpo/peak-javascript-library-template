@@ -41,6 +41,10 @@ export default {
       Replace({
         'process.env.NODE_ENV': JSON.stringify('production'),
       }),
+      Babel({
+        runtimeHelpers: true,
+        exclude: 'node_modules/**',
+      }),
     ],
   },
   umdPluginsBase: [
