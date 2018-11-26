@@ -10,6 +10,15 @@ import Commonjs from 'rollup-plugin-commonjs'
 
 import Pkg from '../package.json'
 
+export const Convert = str => {
+  let arr = str.split('-')
+  let upperCase = arr.slice(1).map(i => {
+    return `${i[0].toUpperCase()}${i.slice(1)}`
+  }).join('')
+
+  return `${arr[0]}${upperCase}`
+}
+
 export default {
   pkg: Pkg,
   input: 'src/index.js',

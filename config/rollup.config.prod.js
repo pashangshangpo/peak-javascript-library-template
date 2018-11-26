@@ -8,13 +8,13 @@ import filesize from 'rollup-plugin-filesize'
 import { uglify } from 'rollup-plugin-uglify'
 import { minify } from 'uglify-es'
 
-import BaseConfig from './rollup.config.base'
+import BaseConfig, { Convert } from './rollup.config.base'
 
 export default [
   {
     input: BaseConfig.input,
     output: {
-      name: BaseConfig.pkg.name,
+      name: Convert(BaseConfig.pkg.name),
       file: BaseConfig.pkg.browser,
       format: 'umd',
     },
@@ -27,7 +27,7 @@ export default [
   {
     input: BaseConfig.input,
     output: {
-      name: BaseConfig.pkg.name,
+      name: Convert(BaseConfig.pkg.name),
       file: `dist/${BaseConfig.pkg.name}.min.js`,
       format: 'umd',
     },
