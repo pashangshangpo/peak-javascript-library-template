@@ -8,6 +8,7 @@ import Babel from 'rollup-plugin-babel'
 import Resolve from 'rollup-plugin-node-resolve'
 import Commonjs from 'rollup-plugin-commonjs'
 import Replace from 'rollup-plugin-replace'
+import Json from 'rollup-plugin-json'
 
 import Pkg from '../package.json'
 
@@ -41,6 +42,7 @@ export default {
       Replace({
         'process.env.NODE_ENV': JSON.stringify('production'),
       }),
+      Json(),
       Babel({
         runtimeHelpers: true,
         exclude: 'node_modules/**',
@@ -51,7 +53,11 @@ export default {
     Replace({
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
-    Resolve(),
+    Resolve({
+      jsnext: true,
+      browser: true,
+    }),
+    Json(),
     Commonjs({
       include: 'node_modules/**',
     }),
