@@ -1,9 +1,9 @@
 {
-  "name": "util",
-  "version": "1.0.0",
-  "main": "dist/util.cjs.js",
-  "module": "dist/util.esm.js",
-  "browser": "dist/util.umd.js",
+  "name": "library",
+  "version": "0.1.0",
+  "main": "dist/library.cjs.js",
+  "module": "dist/library.esm.js",
+  "browser": "dist/library.umd.js",
   "license": "MIT",
   "scripts": {
     "clean": "rimraf dist",
@@ -35,7 +35,9 @@
     "rollup-plugin-json": "^3.1.0",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-replace": "^2.1.0",
-    "rollup-plugin-terser": "^3.0.0"
+    "rollup-plugin-uglify": "^6.0.0",
+    "uglify-es": "^3.3.9"
   },
-  "dependencies": {}
+  "dependencies": {
+  }
 }

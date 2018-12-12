@@ -5,7 +5,8 @@
  */
 
 import filesize from 'rollup-plugin-filesize'
-import { terser } from 'rollup-plugin-terser'
+import { uglify } from 'rollup-plugin-uglify'
+import { minify } from 'uglify-es'
 
 import BaseConfig, { Convert } from './rollup.config.base'
 
@@ -32,9 +33,14 @@ export default [
     },
     plugins: [
       ...BaseConfig.umdPluginsBase,
-      terser({
-        sourcemap: false,
-      }),
+      uglify(
+        {
+          compress: {
+            drop_console: true,
+          },
+        },
+        minify
+      ),
       filesize(),
     ],
   },
