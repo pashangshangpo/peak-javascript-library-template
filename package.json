@@ -38,6 +38,5 @@
     "rollup-plugin-uglify": "^6.0.0",
     "uglify-es": "^3.3.9"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

@@ -1,6 +1,6 @@
 # 简介
 
-开发Javascript公共脚本
+开发 Javascript 公共脚本
 
 ## 开发
 
